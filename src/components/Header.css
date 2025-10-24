@@ -1,0 +1,166 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(160, 160, 160);
+  padding: 15px 40px;
+  gap: 30px;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+.header1 {
+  display: flex;
+  align-items: center;
+}
+
+.header2 ul {
+  list-style-type: none;
+  display: flex;
+  gap: 45px;
+  align-items: center;
+}
+
+.header2 a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header2 a:hover {
+  color: rgba(219, 68, 68, 1);
+}
+
+.header3 {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header3 input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.header3 input:focus {
+  outline: none;
+  border-color: rgba(219, 68, 68, 1);
+}
+
+.cart-icon {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+  color: rgba(219, 68, 68, 1);
+}
+
+.user {
+  padding: 3px;
+  transition: all 0.3s ease;
+}
+
+.user:hover {
+  color: white;
+  background-color: rgba(219, 68, 68, 1);
+  border-radius: 50%;
+}
+.user:active {
+  background-color: rgba(219, 68, 68, 1);
+  color: white;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.dropdown-menu a,
+.dropdown-menu p {
+  display: block;
+  margin: 0;
+  padding: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.dropdown-menu p:hover,
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    gap: 20px;
+    padding: 10px 20px;
+  }
+
+  .header2 ul {
+    gap: 25px;
+  }
+
+  .header3 input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 20px;
+  }
+
+  .header2 ul {
+    display: none;
+  }
+
+  .header3 {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header3 input {
+    flex: 1;
+    width: auto;
+  }
+
+  .dropdown-menu {
+    right: 20px;
+    top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header3 {
+    gap: 15px;
+  }
+
+  .header3 input {
+    display: none;
+  }
+
+  .cart-icon svg,
+  .user {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header1 h3 {
+    font-size: 18px;
+  }
+}

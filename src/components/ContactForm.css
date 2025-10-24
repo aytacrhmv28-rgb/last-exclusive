@@ -1,0 +1,165 @@
+/* Ümumi konteyner */
+.generalcontact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 10px;
+}
+
+.generalcontact1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact1,
+.contact2 {
+  background: #f8f8f8;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact1 h3,
+.contact2 h3 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.contact1 p,
+.contact2 p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.contact3 {
+  flex: 1.5;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form hissəsi */
+.aboutform {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.aboutform input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.aboutform input:focus {
+  outline: none;
+  border-color: #db4444;
+}
+
+.contact4 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact4 textarea {
+  width: 100%;
+  height: 130px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.contact4 textarea:focus {
+  border-color: #db4444;
+}
+
+.contact4 .contactformbutton {
+  align-self: flex-end;
+  background: #db4444;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.contact4 .contactformbutton:hover {
+  background: #b73333;
+  transform: scale(1.03);
+}
+
+@media (max-width: 992px) {
+  .generalcontact {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact3 {
+    width: 100%;
+  }
+
+  .contact4 .contactformbutton {
+    width: 50%;
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutform {
+    flex-direction: column;
+  }
+
+  .aboutform input {
+    width: 100%;
+  }
+
+  .contact4 textarea {
+    height: 110px;
+  }
+
+  .contact4 .contactformbutton {
+    width: 100%;
+  }
+
+  .generalcontact {
+    padding: 15px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact1,
+  .contact2,
+  .contact3 {
+    padding: 20px;
+  }
+
+  .aboutform input,
+  .contact4 textarea {
+    font-size: 13px;
+  }
+
+  .contact4 .contactformbutton {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

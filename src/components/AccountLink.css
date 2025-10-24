@@ -1,0 +1,102 @@
+/* --- Ümumi konteyner --- */
+.account-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 60px 100px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+/* --- Sol menyu (Manage My Account, My Orders və s.) --- */
+.account1 {
+  width: 280px;
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account1 h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.account1 ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.account1 li {
+  margin: 10px 0;
+}
+
+.account1 a {
+  text-decoration: none;
+  color: #555;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.account1 a:hover {
+  color: #e63946;
+  font-weight: 500;
+}
+
+/* --- Form hissəsi --- */
+.accountform1 form {
+  background-color: #fff;
+  padding: 40px 50px;
+  border-radius: 15px;
+  width: 650px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accountform1 form .text-field,
+.accountform1 form .input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.accountform1 form label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.accountform1 form input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.accountform1 form input:focus {
+  border-color: #e63946;
+  outline: none;
+  box-shadow: 0 0 4px rgba(230, 57, 70, 0.4);
+}
+
+button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #c72f3b;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,54 @@
+.categories {
+  display: flex;
+}
+.categories1 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 40px;
+  justify-content: center;
+  padding-left: 90px;
+  padding-right: 90px;
+  list-style-type: none;
+  border-right: 1px solid rgb(160, 160, 160);
+}
+.categories1 ul a {
+  text-decoration: none;
+  color: black;
+}
+.categories2 {
+  width: 900px;
+  height: 350px;
+  display: flex;
+  justify-content: flex-end; /* sağa itələyir */
+  align-items: center;
+  background-color: black;
+  margin-top: 30px;
+  margin-left: 30px;
+  position: relative;
+}
+.categories2 img {
+  width: 50%;
+  height: 80%;
+  object-fit: fill;
+}
+.categories2 h4 {
+  top: 115px;
+  position: absolute;
+  color: white;
+  left: 150px;
+}
+.categories2 p {
+  font-size: 50px;
+  position: absolute;
+  color: white;
+  top: 135px;
+  left: 150px;
+}
+.categories2 a {
+  position: absolute;
+  top: 280px;
+  left: 150px;
+  transform: translateY(-50%);
+  color: white;
+}

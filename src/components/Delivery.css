@@ -1,0 +1,40 @@
+.delivery1 {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-bottom: 90px;
+}
+
+.delivery2 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+}
+
+.delivery2:hover {
+  transform: translateY(-5px);
+}
+
+.delivery-icon {
+  border-radius: 50%;
+  background-color: black;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  color: white;
+}
+
+.delivery-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.delivery-desc {
+  color: #555;
+  font-size: 0.9rem;
+}
