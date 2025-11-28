@@ -1,22 +1,57 @@
 import React from "react";
 import products from "../data/MockData.jsx";
+import { Link } from "react-router-dom";
+import BackButton from "../shared/backbutton/BackButton.jsx";
 import "./WomensFashion.css";
-import {Link} from "react-router-dom"
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cart/cartSlice";
+import { addToWishlist } from "../features/cart/wishlistSlice";
+import { Heart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 function MensFashion() {
+  const dispatch = useDispatch();
   const mensCategory = products.find(
     (category) => category.name === "Men's Fashion"
   );
 
   return (
-    <div className="womens-page">
-      <h1>{mensCategory.name}</h1>
-      <div className="product-grid">
+    <div className="womens">
+      <BackButton />
+      <h1 className="womens__title">{mensCategory.name}</h1>
+
+      <div className="womens__grid">
         {mensCategory.products.map((item) => (
-          <Link to={`/product/${item.id}`} key={item.id} className="product-card">
-            <img src={item.images[0]} alt={item.name} className="product-img" />
-            <p className="product-name">{item.name || "Product"}</p>
-            <p className="product-price">${item.price}</p>
-          </Link>
+          <div key={item.id} className="womens__card">
+            {/* ❤️🛒 Hover ikonları */}
+            <div className="womens__icons">
+              <Heart
+                className="womens__icon"
+                onClick={(e) => {
+                  e.preventDefault();
+                  dispatch(addToWishlist(item));
+                }}
+              />
+            </div>
+            <Link
+              to={`/product/${item.id}`}
+              key={item.id}
+              className="womens__card"
+            >
+              <img
+                src={item.images[0]}
+                alt={item.name}
+                className="womens__image"
+              />
+              <p className="womens__name">{item.name}</p>
+              <p className="womens__price">${item.price}</p>
+            </Link>
+            <button
+              className="add-to-cart-btn"
+              onClick={() => dispatch(addToCart(item))}
+            >
+              Add to Cart
+            </button>
+          </div>
         ))}
       </div>
     </div>

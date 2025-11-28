@@ -14,9 +14,6 @@ import LogIn from "../pages/LogIn.jsx";
 import Cart from "../pages/Cart.jsx";
 import WishList from "../pages/WishList.jsx";
 import Shop from "../pages/Shop.jsx";
-import Privacy from "../pages/Privacy.jsx";
-import Terms from "../pages/Terms.jsx";
-import FAQ from "../pages/FAQ.jsx";
 import MyProfile from "../pages/MyProfile.jsx";
 import AddressBook from "../pages/AddressBook.jsx";
 import MyPaymentOptions from "../pages/MyPaymentOptions.jsx";
@@ -43,9 +40,6 @@ const routers = [
   { path: "/cart", element: <Cart /> },
   { path: "/wishlist", element: <WishList /> },
   { path: "/shop", element: <Shop /> },
-  { path: "/privacy", element: <Privacy /> },
-  { path: "/terms", element: <Terms /> },
-  { path: "/faq", element: <FAQ /> },
   { path: "/myprofile", element: <MyProfile /> },
   { path: "/addressbook", element: <AddressBook /> },
   { path: "/mypaymentoptions", element: <MyPaymentOptions /> },

@@ -16,13 +16,30 @@ function TeamMember() {
     <div className="team-members-container">
       {team.map((member, index) => (
         <div className="team-member-card" key={index}>
-          <img src={member.image} alt={member.name} />
-          <h2>{member.name}</h2>
-          <p>{member.role}</p>
+          <div className="team-member-image-wrapper">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="team-member-image"
+            />
+          </div>
+          <div className="team-member-info">
+            <h2 className="team-member-name">{member.name}</h2>
+            <p className="team-member-role">{member.role}</p>
+          </div>
           <div className="team-member-socials">
-            <Twitter className="team-social-icon" strokeWidth={1}/>
-            <Instagram className="team-social-icon" strokeWidth={1}/>
-            <Linkedin className="team-social-icon" strokeWidth={1}/>
+            <Twitter
+              className="team-social-icon twitter-icon"
+              strokeWidth={1}
+            />
+            <Instagram
+              className="team-social-icon instagram-icon"
+              strokeWidth={1}
+            />
+            <Linkedin
+              className="team-social-icon linkedin-icon"
+              strokeWidth={1}
+            />
           </div>
         </div>
       ))}
@@ -31,4 +48,3 @@ function TeamMember() {
 }
 
 export default TeamMember;
-

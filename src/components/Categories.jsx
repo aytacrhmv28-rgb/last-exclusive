@@ -27,13 +27,14 @@ function Links() {
       <div className="categories2">
         <img src={i250} className="i250"></img>
         <h4>iPhone 14 Series</h4>
-        <p>Up to 10% <br/>off Voucher</p>
-         <Link to="/electronics" className="banner-btn">
-            Shop Now →
-          </Link>
+        <p>
+          Up to 10% <br />
+          off Voucher
+        </p>
+        <Link to="/electronics" className="banner-btn">
+          Shop Now →
+        </Link>
       </div>
-      
-
     </div>
   );
 }

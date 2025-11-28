@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 30px;
   padding-bottom: 90px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 /* Kart */
@@ -51,7 +51,6 @@
 .statistic-card:hover .statisticcard5 {
   color: white;
 }
-
 
 @media (max-width: 768px) {
   .statistic-card {

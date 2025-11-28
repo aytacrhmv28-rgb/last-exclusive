@@ -1,122 +1,183 @@
-
-
-.womens-page {
-  padding: 40px 80px;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+.womens {
+  padding: 20px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: white; /* Bir qədər daha təmiz fon */
+  min-height: 100vh;
 }
 
-.womens-page h1 {
+.womens__title {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 36px;
-  color: #333;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: #111;
+  font-family: "Poppins", sans-serif;
 }
 
-.product-grid {
+
+
+.womens__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 20px; 
+  grid-template-columns: repeat(5, 1fr); /* 4 sütun */
+  gap: 25px; /* Sütunlar arası boşluq */
+  justify-items: center;
 }
 
-.product-card {
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+/* --- Məhsul Kartı Üslubu (Şəkildəki Görünüş) --- */
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.product-img {
+.womens__card {
+  position: relative;
   width: 100%;
-  height: 300px;
-  object-fit: contain;
+  max-width: 280px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); /* Yüngül kölgə */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  /* Flexbox ilə içindəkiləri mərkəzləşdiririk */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.womens__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Kartın içindəki Link elementi (bütün məlumatları əhatə edir) */
+.womens__card a {
+  text-decoration: none; /* Alt xətti ləğv edir */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* --- Məhsul Şəkli --- */
+
+.womens__image {
   display: block;
+  width: 90%;
+  margin: 10px auto 0 auto; /* Yuxarıda daha az boşluq */
+  height: 250px; /* Səliqəli bir hündürlük */
+  border-radius: 4px;
+  object-fit: top;
+  transition: transform 0.4s ease;
 }
 
-.product-name {
-  font-size: 18px;
+/* --- Məhsul Məlumatları (Ad və Qiymət) --- */
+
+.womens__name {
+  font-size: 1rem;
   font-weight: 500;
-  margin: 12px 16px 4px;
+  color: #333;
+  margin-top: 15px;
+  text-align: center;
+  padding: 0 10px;
+  width: 100%; /* Səliqəli görünüş üçün */
+  /* Məhsul adının uzun olması halında çıxmaması üçün */
+  white-space: nowrap; /* Tək sətirdə saxla */
+  overflow: hidden; /* Kartdan kənara çıxan hissəni gizlət */
+  text-overflow: ellipsis; /* Axırına nöqtələr qoy */
 }
 
-.product-price {
-  font-size: 16px;
+.womens__price {
+  color: #d23f57; /* Qırmızı Qiymət */
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 5px;
+  margin-bottom: 10px; /* Düymədən yuxarıdakı boşluq */
+}
+
+/* --- Ürək İkonu (Wishlist) --- */
+
+.womens__icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+.womens__card:hover .womens__icons {
+  opacity: 1;
+}
+.womens__icon {
+  background: #ffffffcc;
+  border-radius: 50%;
+  padding: 7px;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #444;
+  width: 30px;
+  height: 30px;
+}
+.womens__icon:hover {
+  background: #ffe6ea;
+  color: #d23f57;
+  transform: scale(1.1);
+}
+
+/* --- Add to Cart Düyməsi --- */
+
+.add-to-cart-btn {
+  display: block;
+  width: 85%;
+  margin: 0 auto 15px auto;
+  padding: 10px 0;
+  background: #222; /* Daha tünd, səliqəli rəng */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
   font-weight: 600;
-  color: #e60023;
-  margin: 0 16px 16px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.add-to-cart-btn:hover {
+  background: #000;
+  transform: scale(1.02);
 }
 
-@media (max-width: 1024px) {
-  .womens-page {
-    padding: 30px 50px;
-  }
+/* ==================================== */
+/* 📱 Mobil Uyğunlaşdırma */
+/* ==================================== */
 
-  .product-grid {
+/* 1200px-ə qədər (3 sütun) */
+@media (max-width: 1200px) {
+  .womens__grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-
-  .product-img {
-    height: 260px;
-  }
-
-  .womens-page h1 {
-    font-size: 30px;
-  }
 }
 
-
+/* 768px-ə qədər (2 sütun) */
 @media (max-width: 768px) {
-  .womens-page {
-    padding: 25px;
+  .womens {
+    padding: 30px 20px;
   }
-
-  .product-grid {
+  .womens__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
-
-  .product-img {
-    height: 220px;
-  }
-
-  .product-name {
-    font-size: 16px;
-  }
-
-  .product-price {
-    font-size: 15px;
-  }
-
-  .womens-page h1 {
-    font-size: 26px;
+  .womens__image {
+    height: 180px;
   }
 }
 
-
+/* 480px-ə qədər (1 sütun) */
 @media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: 1fr; /* tək sütun */
-    gap: 20px;
+  .womens__grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
-
-  .product-img {
-    height: 240px;
-  }
-
-  .womens-page {
-    padding: 20px 15px;
-  }
-
-  .womens-page h1 {
-    font-size: 22px;
+  .womens__title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
   }
 }

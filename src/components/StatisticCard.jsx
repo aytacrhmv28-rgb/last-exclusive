@@ -1,8 +1,7 @@
-import { Store, CircleDollarSign, ShoppingBag, Wallet} from 'lucide-react';
+import { Store, CircleDollarSign, ShoppingBag, Wallet } from "lucide-react";
 import "./StatisticCard.css";
 function StatisticCard() {
-  
-    const cards =  [
+  const cards = [
     {
       icon: <Store size={40} strokeWidth={1} />,
       title: "10.5k",
@@ -24,8 +23,8 @@ function StatisticCard() {
       desc: "Anual gross sale in our site",
     },
   ];
-return(
-    <div className='statistic-cards-container'>
+  return (
+    <div className="statistic-cards-container">
       {cards.map((card, index) => (
         <div className="statistic-card" key={index}>
           <div className="statistic-card-icon">{card.icon}</div>
@@ -34,7 +33,6 @@ return(
         </div>
       ))}
     </div>
-);
-
+  );
 }
-export default StatisticCard
+export default StatisticCard;

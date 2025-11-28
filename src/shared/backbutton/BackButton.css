@@ -1,0 +1,47 @@
+.backButton1 {
+  background-color: white;
+  color: rgba(219, 68, 68, 1);
+  border: 1px solid rgba(219, 68, 68, 1);
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;               /* icon ortada olsun */
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Hover effekti */
+.backButton1:hover {
+  background-color: rgba(219, 68, 68, 1);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* 🔹 Tablet ekranlar (768px və aşağı) */
+@media (max-width: 768px) {
+  .backButton1 {
+    padding: 8px 24px;
+    border-radius: 8px;
+  }
+
+  .backButton1 svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* 🔹 Mobil ekranlar (480px və aşağı) */
+@media (max-width: 480px) {
+  .backButton1 {
+    padding: 6px 18px;
+    border-radius: 8px;
+    width: 100%;              /* ekranın tam eninə yayılsın */
+    box-sizing: border-box;
+  }
+
+  .backButton1 svg {
+    width: 24px;
+    height: 24px;
+  }
+}

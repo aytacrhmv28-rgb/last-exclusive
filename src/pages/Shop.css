@@ -1,0 +1,181 @@
+/* ==================================== */
+/* 🛒 Shop Page - Stil (WomensFashion dizaynına uyğun) */
+/* ==================================== */
+
+.shop-container {
+  padding: 20px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.shop-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* --- Məhsul Grid --- */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+/* --- Məhsul Kartı --- */
+.shop-card {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Məhsul Şəkli --- */
+.shop-card img {
+  display: block;
+  width: 90%;
+  margin: 10px auto 0 auto;
+  height: 250px;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* --- Məhsul Adı --- */
+.shop-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 15px;
+  text-align: center;
+  padding: 0 10px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* --- Qiymət --- */
+.price {
+  color: #d23f57;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* --- Kateqoriya adı --- */
+.category {
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* --- View Details düyməsi --- */
+.view-btn {
+  display: block;
+  width: 85%;
+  margin: 0 auto 15px auto;
+  padding: 10px 0;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.view-btn:hover {
+  background: #000;
+  transform: scale(1.02);
+}
+
+/* --- Ürək və səbət ikonları (əgər əlavə etmək istəsən) --- */
+.shop-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+.shop-card:hover .shop-icons {
+  opacity: 1;
+}
+.shop-icon {
+  background: #ffffffcc;
+  border-radius: 50%;
+  padding: 7px;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #444;
+  width: 30px;
+  height: 30px;
+}
+.shop-icon:hover {
+  background: #ffe6ea;
+  color: #d23f57;
+  transform: scale(1.1);
+}
+
+/* ==================================== */
+/* 📱 Responsiv Dizayn */
+/* ==================================== */
+
+/* 1200px-ə qədər (3 sütun) */
+@media (max-width: 1200px) {
+  .shop-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* 768px-ə qədər (2 sütun) */
+@media (max-width: 768px) {
+  .shop-container {
+    padding: 30px 20px;
+  }
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .shop-card img {
+    height: 180px;
+  }
+}
+
+/* 480px-ə qədər (1 sütun) */
+@media (max-width: 480px) {
+  .shop-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .shop-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+}

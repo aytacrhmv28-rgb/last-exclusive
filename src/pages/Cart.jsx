@@ -7,6 +7,7 @@ import {
   addToCart,
   clearCart,
 } from "../features/cart/cartSlice";
+import BackButton from "../shared/backbutton/BackButton";
 
 function Cart() {
   const items = useSelector((state) => state.cart.items);

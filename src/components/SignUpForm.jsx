@@ -1,51 +1,68 @@
 import "./SignUpForm.css";
-import Input from "../shared/input/Input";
-import Button from "../shared/button/Button";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import i1 from "../assets/i1.jpg";
-import { useState } from "react";
+
 function SignUpForm() {
   const [name, setName] = useState("");
   const [emailOrPhone, setEmailOrPhone] = useState("");
   const [password, setPassword] = useState("");
+
   return (
-    <div className="signUp">
-      <div className="signUp1">
-        <img src={i1} className="i1"></img>
+    <div className="signup-container">
+      <div className="signup-image-section">
+        <img src={i1} alt="Sign Up" className="signup-image" />
       </div>
-      <div className="signUp2">
-        <div className="signUp5">
-          <h1>Create An Account</h1>
-          <p>Enter your details below</p>
+
+      <div className="signup-form-section">
+        <div className="signup-header">
+          <h1 className="signup-title">Create An Account</h1>
+          <p className="signup-subtitle">Enter your details below</p>
         </div>
 
-        <div className="signUp3">
-          <form>
-            <Input
+        <form className="signup-form">
+          <div className="signup-input-group">
+            <input
+              type="text"
+              placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Name"
+              className="signup-input"
             />
-            <Input
+          </div>
+          <div className="signup-input-group">
+            <input
+              type="text"
+              placeholder="Email or Phone"
               value={emailOrPhone}
               onChange={(e) => setEmailOrPhone(e.target.value)}
-              placeholder="Email or Phone number"
+              className="signup-input"
             />
-            <Input
+          </div>
+          <div className="signup-input-group">
+            <input
               type="password"
+              placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
+              className="signup-input"
             />
-            <Button className="buttonSignUp">Create Account</Button>
-          </form>
-        </div>
-        <div className="signUp4">
-          <p>Already have account?</p>
-          <Link to="/login">Login</Link>
-        </div>
+          </div>
+
+          <button type="submit" className="signup-button">
+            Create Account
+          </button>
+        </form>
+
+        <p className="signup-login-text">
+          Already have an account?{" "}
+          <Link to="/login" className="signup-login-link">
+            Login
+          </Link>
+        </p>
       </div>
     </div>
   );
 }
+
 export default SignUpForm;

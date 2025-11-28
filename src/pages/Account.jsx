@@ -1,12 +1,11 @@
-import AccountForm from "../components/AccountForm";
-import AccountLink from "../components/AccountLink";
+
+import Accountunicindeolanlar from "../components/Accountunicindeolanlar";
 import "./Account.css";
 
 function Account() {
     return(
         <div className="account-container">
-            <AccountLink/>
-            <AccountForm/>
+            <Accountunicindeolanlar/>
             
         </div>
     );

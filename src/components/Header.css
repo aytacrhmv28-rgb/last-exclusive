@@ -7,62 +7,58 @@
   gap: 30px;
   margin-top: 5px;
   flex-wrap: wrap;
+  background-color: white;
 }
-
 .header1 {
   display: flex;
   align-items: center;
 }
-
 .header2 ul {
   list-style-type: none;
   display: flex;
   gap: 45px;
   align-items: center;
 }
-
+.header1 a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 .header2 a {
   text-decoration: none;
   color: black;
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
 .header2 a:hover {
   color: rgba(219, 68, 68, 1);
 }
-
 .header3 {
   display: flex;
   align-items: center;
   gap: 25px;
 }
-
 .header3 input {
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
-
 .header3 input:focus {
   outline: none;
   border-color: rgba(219, 68, 68, 1);
 }
-
 .cart-icon {
   color: black;
   transition: color 0.3s ease;
 }
-
 .cart-icon:hover {
   color: rgba(219, 68, 68, 1);
 }
-
 .user {
   padding: 3px;
   transition: all 0.3s ease;
 }
-
 .user:hover {
   color: white;
   background-color: rgba(219, 68, 68, 1);
@@ -72,7 +68,6 @@
   background-color: rgba(219, 68, 68, 1);
   color: white;
 }
-
 .dropdown-menu {
   position: absolute;
   top: 70px;
@@ -85,7 +80,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
-
 .dropdown-menu a,
 .dropdown-menu p {
   display: block;
@@ -96,27 +90,36 @@
   color: black;
   font-size: 14px;
 }
-
 .dropdown-menu p:hover,
 .dropdown-menu a:hover {
   background-color: #f2f2f2;
 }
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: black;
+  transition: color 0.3s ease;
+}
 
+.hamburger:hover {
+  color: rgba(219, 68, 68, 1);
+}
+/* Large ekranlar üçün (1024px-ə qədər) */
 @media (max-width: 1024px) {
   .header {
     gap: 20px;
     padding: 10px 20px;
   }
-
   .header2 ul {
     gap: 25px;
   }
-
   .header3 input {
     width: 150px;
   }
 }
 
+/* Medium ekranlar üçün (768px-ə qədər) */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -124,43 +127,81 @@
     gap: 15px;
     padding: 10px 20px;
   }
-
   .header2 ul {
-    display: none;
+    display: none; /* menyunu gizlədir */
   }
-
   .header3 {
     width: 100%;
     justify-content: space-between;
   }
-
   .header3 input {
     flex: 1;
     width: auto;
   }
-
   .dropdown-menu {
     right: 20px;
     top: 60px;
   }
+  .hamburger {
+    display: block;
+  }
+
+  .header2 {
+    display: none;
+    width: 100%;
+  }
+
+  .header2.active {
+    display: block;
+    background-color: white;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  .header2.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-left: 20px;
+  }
+
+  .header2.active a {
+    color: black;
+    font-weight: 500;
+  }
 }
 
+/* Kiçik ekranlar üçün (480px-ə qədər) */
 @media (max-width: 480px) {
   .header3 {
-    gap: 15px;
+    gap: 10px;
   }
-
   .header3 input {
-    display: none;
+    display: none; /* axtarış inputunu gizlədir */
   }
-
   .cart-icon svg,
   .user {
     width: 26px;
     height: 26px;
   }
-
   .header1 h3 {
-    font-size: 18px;
+    font-size: 16px;
+  }
+}
+
+/* Əlavə mobil tənzimləmələr */
+@media (max-width: 360px) {
+  .header {
+    padding: 8px 15px;
+  }
+  .header3 {
+    gap: 8px;
+  }
+  .cart-icon svg,
+  .user {
+    width: 22px;
+    height: 22px;
   }
 }

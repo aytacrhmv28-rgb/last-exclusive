@@ -1,10 +1,109 @@
-.buttonSignUp2 {
-  width: 143px;
-  height: 50px;
-  background: #db4444;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+/* === MAIN CONTAINER === */
+.login-container {
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+  gap: 50px;
+  font-family: Arial, sans-serif;
 }
 
+/* === IMAGE SECTION === */
+.login-image-section {
+  width: 60%;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === FORM SECTION === */
+.login-form-section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === HEADER === */
+.login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* === FORM === */
+.login-form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.login-input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #db4444;
+  box-shadow: 0 0 5px rgba(219, 68, 68, 0.4);
+}
+
+/* === BUTTON === */
+.login-button {
+  padding: 12px;
+  background-color: #db4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background-color: #c03939;
+}
+
+/* === FORGOT PASSWORD TEXT === */
+.login-forgot-text {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-image-section {
+    display: none;
+  }
+
+  .login-form-section {
+    width: 90%;
+    text-align: center;
+  }
+}

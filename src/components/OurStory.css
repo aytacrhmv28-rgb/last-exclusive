@@ -1,58 +1,67 @@
 .ourstory-container {
   display: flex;
   align-items: center;
-  padding: 80px 0px 80px 130px;
-  gap: 120px;
+  padding: 10vh 0 10vh 8vw; /* 80px → 10vh və 130px → 8vw */
 }
 
-.ourstory-text,
-.ourstory-image {
+.ourstory-content {
+  display: flex;
+  align-items: center;
+  gap: 7vw; /* 120px → təxminən 7vw */
+}
+
+.ourstory-text-section {
   flex: 1;
 }
 
-.ourstory-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-}
-
-.ourstory-text h3 {
+.ourstory-title {
   font-family: "Inter", sans-serif;
-  font-size: 54px;
+  font-size: 3.4rem; /* 54px → 3.4rem (1rem ≈ 16px) */
   font-weight: 600;
-  margin-bottom: 40px;
-  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.12em;
 }
 
-.ourstory-text p {
-  font-size: 16px;
+.ourstory-paragraph {
+  font-size: 1rem; /* 16px → 1rem */
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   color: #000;
 }
 
+.ourstory-image-section {
+  flex: 1;
+}
+
+.ourstory-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.25rem; /* 4px → 0.25rem */
+}
+
+/* --- Medium ekranlar --- */
 @media (max-width: 1024px) {
   .ourstory-container {
-    padding: 60px 60px;
-    gap: 60px;
+    padding: 8vh 6vw;
+    gap: 5vw;
   }
-  .ourstory-text h3 {
-    font-size: 40px;
+
+  .ourstory-title {
+    font-size: 2.5rem; /* 40px */
   }
 }
 
+/* --- Kiçik ekranlar --- */
 @media (max-width: 768px) {
   .ourstory-container {
     flex-direction: column;
-
-    padding: 40px 20px;
-
-    gap: 40px;
+    padding: 6vh 4vw;
+    gap: 5vh;
   }
 
-  .ourstory-text h3 {
-    font-size: 32px;
-    margin-bottom: 20px;
+  .ourstory-title {
+    font-size: 2rem; /* 32px */
+    margin-bottom: 1.25rem;
   }
 }
